@@ -1,72 +1,110 @@
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  background: url('../images/gym-bg.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* center vertically */
+  align-items: center;     /* center horizontally */
+  color: white;
+  text-align: center;
+  position: relative;
 }
 
 .navbar {
-  background: #222;
-  color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
+}
+
+.navbar h1 {
+  color: #fff;
+  margin-left: 1rem;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  margin-right: 1rem;
 }
 
-.navbar a {
+.navbar ul li {
+  margin: 0 10px;
+}
+
+.navbar ul li a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
-.hero {
-  background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001e5');
-  background-size: cover;
-  height: 100vh; /* Full screen height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-
-.hero-text h2 {
-  background-color: rgba(0, 0, 0, 0.5); /* Optional: improves contrast */
+.hero-text {
+  z-index: 1;
   padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
 
 .btn {
-  background: #007bff;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
   color: white;
-  padding: 0.7rem 1.2rem;
-  text-decoration: none;
   border-radius: 5px;
+  text-decoration: none;
 }
 
-.feature-list, .plans {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  margin: 2rem 0;
-}
-
-.feature, .plan {
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  min-width: 200px;
+#features,
+#membership {
+  padding: 2rem;
   text-align: center;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.feature {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 10px;
+  min-width: 180px;
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.plan {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  min-width: 180px;
 }
 
 footer {
@@ -74,13 +112,4 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
-}
-
-.login-container, .dashboard-container {
-  max-width: 400px;
-  margin: auto;
-  padding: 2rem;
-  background: white;
-  margin-top: 4rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
