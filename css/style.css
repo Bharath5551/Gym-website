@@ -4,35 +4,35 @@
   box-sizing: border-box;
 }
 
-body, html {
-  font-family: Arial, sans-serif;
+html, body {
   height: 100%;
-  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
 }
 
+/* HERO SECTION */
 .hero {
-  background: url('../images/gym-bg.jpg') no-repeat center center;
-  background-size: cover;
   height: 100vh;
+  background: url('../images/gym-bg.jpg') no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  text-align: center;
   color: white;
+  text-align: center;
 }
 
+/* NAVBAR */
 .navbar {
   position: absolute;
   top: 0;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 999;
+  z-index: 10;
 }
 
 .navbar h1 {
@@ -51,17 +51,19 @@ body, html {
   font-weight: bold;
 }
 
+/* HERO TEXT */
 .hero-text {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   border-radius: 10px;
   max-width: 600px;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
+/* BUTTON */
 .btn {
   margin-top: 1rem;
-  padding: 10px 20px;
+  padding: 0.8rem 1.5rem;
   background-color: #007bff;
   color: white;
   border-radius: 5px;
@@ -69,18 +71,19 @@ body, html {
   font-weight: bold;
 }
 
+/* FEATURES + MEMBERSHIP */
 #features,
 #membership {
   padding: 3rem 1rem;
   text-align: center;
-  background-color: white;
+  background-color: #fff;
 }
 
 .feature-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
+  gap: 1rem;
   margin-top: 1rem;
 }
 
@@ -93,9 +96,9 @@ body, html {
 
 .plans {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
   margin-top: 1rem;
 }
 
@@ -106,6 +109,7 @@ body, html {
   min-width: 200px;
 }
 
+/* FOOTER */
 footer {
   background: #222;
   color: white;
