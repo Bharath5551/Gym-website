@@ -26,7 +26,7 @@ body {
 }
 
 .hero {
-  background: url('../images/gym.jpg') center/cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001e5') center/cover no-repeat;
   color: transparent;
   text-align: center;
   padding: 5rem 1rem;
