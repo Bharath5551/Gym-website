@@ -27,9 +27,14 @@ body {
 
 .hero {
   background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001e5') center/cover no-repeat;
-  color: transparent;
+  background-size: cover;
+  height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
   text-align: center;
-  padding: 5rem 1rem;
 }
 
 
