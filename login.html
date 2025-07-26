@@ -1,19 +1,28 @@
-<!-- login.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Login | Gym Portal</title>
+  <meta charset="UTF-8">
+  <title>Login | PowerZone Gym</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h2>Member Login</h2>
-  <form onsubmit="loginUser(event)">
-    <input type="email" id="email" placeholder="Email" required><br>
-    <input type="password" id="password" placeholder="Password" required><br>
-    <button type="submit">Login</button>
-  </form>
+  <div class="login-container">
+    <h2>Member Login</h2>
+    <form onsubmit="loginUser(event)">
+      <input type="email" id="email" placeholder="Email" required><br>
+      <input type="password" id="password" placeholder="Password" required><br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
 
-  <script src="js/auth.js"></script>
+  <script>
+    function loginUser(e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      localStorage.setItem("user", JSON.stringify({ email }));
+      alert("Login successful!");
+      window.location.href = "dashboard.html";
+    }
+  </script>
 </body>
 </html>
-
