@@ -7,6 +7,7 @@
 body, html {
   height: 100%;
   font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
 }
 
 .hero {
@@ -15,38 +16,33 @@ body, html {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* center vertically */
-  align-items: center;     /* center horizontally */
-  color: white;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  text-align: center;
+  color: white;
 }
 
 .navbar {
   position: absolute;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
+  z-index: 10;
 }
 
 .navbar h1 {
-  color: #fff;
-  margin-left: 1rem;
+  color: white;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  margin-right: 1rem;
-}
-
-.navbar ul li {
-  margin: 0 10px;
+  gap: 1.5rem;
 }
 
 .navbar ul li a {
@@ -56,10 +52,10 @@ body, html {
 }
 
 .hero-text {
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
+  max-width: 600px;
 }
 
 .btn {
@@ -70,41 +66,44 @@ body, html {
   color: white;
   border-radius: 5px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 #features,
 #membership {
-  padding: 2rem;
+  padding: 3rem 1rem;
   text-align: center;
+  background-color: #fff;
 }
 
 .feature-list {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
   flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
   margin-top: 1rem;
 }
 
 .feature {
-  background: #f4f4f4;
+  background: #eaeaea;
   padding: 1rem;
-  border-radius: 10px;
-  min-width: 180px;
+  border-radius: 8px;
+  min-width: 200px;
 }
 
 .plans {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .plan {
-  background: #f9f9f9;
-  padding: 1rem;
+  background: #f2f2f2;
+  padding: 1.2rem;
   border-radius: 10px;
-  min-width: 180px;
+  min-width: 200px;
 }
 
 footer {
