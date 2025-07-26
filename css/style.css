@@ -5,9 +5,9 @@
 }
 
 body, html {
-  height: 100%;
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  height: 100%;
+  background-color: #f0f0f0;
 }
 
 .hero {
@@ -27,12 +27,12 @@ body, html {
   position: absolute;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
   padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 999;
 }
 
 .navbar h1 {
@@ -40,8 +40,8 @@ body, html {
 }
 
 .navbar ul {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 1.5rem;
 }
 
@@ -56,13 +56,13 @@ body, html {
   padding: 2rem;
   border-radius: 10px;
   max-width: 600px;
+  margin-top: 80px;
 }
 
 .btn {
   margin-top: 1rem;
   padding: 10px 20px;
   background-color: #007bff;
-  border: none;
   color: white;
   border-radius: 5px;
   text-decoration: none;
@@ -73,7 +73,7 @@ body, html {
 #membership {
   padding: 3rem 1rem;
   text-align: center;
-  background-color: #fff;
+  background-color: white;
 }
 
 .feature-list {
@@ -95,8 +95,8 @@ body, html {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 1.5rem;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .plan {
