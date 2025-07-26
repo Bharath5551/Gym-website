@@ -27,7 +27,7 @@ body {
 
 .hero {
   background: url('../images/gym.jpg') center/cover no-repeat;
-  color: transprant;
+  color: transparent;
   text-align: center;
   padding: 5rem 1rem;
 }
