@@ -13,8 +13,8 @@
       <h1>PowerZone Gym</h1>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="diet.html" target="_blank">Nutrition</a></li>
-        <li><a href="about.html" target="_blank">About</a></li>
+        <li><a href="diet.html">Nutrition</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
     <div class="hero-text">
@@ -24,42 +24,50 @@
     </div>
   </header>
 
-  <section id="features">
-    <h2>Why Choose PowerZone?</h2>
-    <div class="feature-list">
-      <div class="feature">💪 Certified Trainers</div>
-      <div class="feature">🕘 Open 5AM – 11PM</div>
-      <div class="feature">🧘‍♂️ Personal Coaching</div>
-      <div class="feature">🚿 Clean Facilities</div>
-    </div>
-  </section>
+  <main>
+    <section id="features">
+      <h2>Why Choose PowerZone?</h2>
+      <div class="feature-list">
+        <div class="feature">💪 Certified Trainers</div>
+        <div class="feature">🕘 Open 5AM – 11PM</div>
+        <div class="feature">🧘‍♂️ Personal Coaching</div>
+        <div class="feature">🚿 Clean Facilities</div>
+      </div>
+    </section>
 
-  <section id="membership">
-    <h2>Membership Plans</h2>
-    <div class="plans">
-      <div class="plan">
-        <h3>Monthly</h3>
-        <p>₹500 / month</p>
+    <section id="membership">
+      <h2>Membership Plans</h2>
+      <div class="plans">
+        <div class="plan">
+          <h3>Monthly</h3>
+          <p>₹500 / month</p>
+        </div>
+        <div class="plan">
+          <h3>Quarterly</h3>
+          <p>₹1500 / 3 months</p>
+        </div>
+        <div class="plan">
+          <h3>Yearly</h3>
+          <p>₹6,000 / year</p>
+        </div>
       </div>
-      <div class="plan">
-        <h3>Quarterly</h3>
-        <p>₹1500 / 3 months</p>
-      </div>
-      <div class="plan">
-        <h3>Yearly</h3>
-        <p>₹6,000 / year</p>
-      </div>
-    </div>
-    <a href="diet.html" class="btn">Buy Now</a>
-  </section>
+      <a href="diet.html" class="btn">Buy Now</a>
+    </section>
+  </main>
 
   <footer>
-    <p>📍 PowerZone Gym, Haveri | 📞 +91-XXXXXXXXXX</p>
+    <address>
+      📍 PowerZone Gym, Haveri<br>
+      📞 +91-XXXXXXXXXX
+    </address>
   </footer>
-<script>
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
-</script>
+
+  <script>
+    // Scroll to top on reload
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
+  </script>
+
 </body>
 </html>
