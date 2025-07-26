@@ -1,23 +1,58 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Dashboard | Gym Member</title>
+  <meta charset="UTF-8">
+  <title>Dashboard | PowerZone</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h2>Welcome, <span id="userEmail"></span></h2>
+  <div class="dashboard-container">
+    <h2>Welcome, <span id="userEmail"></span></h2>
 
-  <h3>Workout Plan</h3>
-  <ul id="workoutList"></ul>
+    <h3>Workout Plan</h3>
+    <ul id="workoutList"></ul>
 
-  <h3>Diet Plan</h3>
-  <ul>
-    <li>Breakfast: Oats & Banana</li>
-    <li>Lunch: Rice + Soya Chunks</li>
-    <li>Dinner: Chapati + Soya + Veggies</li>
-  </ul>
+    <h3>Diet Plan</h3>
+    <ul>
+      <li>Breakfast: Oats & Banana</li>
+      <li>Lunch: Rice + Soya Chunks</li>
+      <li>Dinner: Chapati + Veggies</li>
+    </ul>
 
-  <script src="js/dashboard.js"></script>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (!user) {
+        window.location.href = "login.html";
+        return;
+      }
+      document.getElementById("userEmail").innerText = user.email;
+
+      const workouts = {
+        Monday: "Chest",
+        Tuesday: "Back",
+        Wednesday: "Legs",
+        Thursday: "Arms",
+        Friday: "Shoulders",
+        Saturday: "Cardio + Abs",
+        Sunday: "Rest"
+      };
+
+      const list = document.getElementById("workoutList");
+      for (const day in workouts) {
+        const li = document.createElement("li");
+        li.innerText = `${day}: ${workouts[day]}`;
+        list.appendChild(li);
+      }
+    });
+
+    function logout() {
+      localStorage.removeItem("user");
+      window.location.href = "login.html";
+    }
+  </script>
 </body>
 </html>
